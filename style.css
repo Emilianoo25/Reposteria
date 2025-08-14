@@ -1,0 +1,277 @@
+/* Reset básico para evitar estilos por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ----------- ESTILO GENERAL ----------- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff8f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ----------- HEADER ----------- */
+header {
+    background-color: #f7d9e3;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background: linear-gradient(135deg, #f7d9e3, #fff0f6);
+    position: relative;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background: url('img/floral-border.svg') repeat-x;
+    background-size: contain;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #7a3e48;
+}
+
+/* ----------- NAVEGACIÓN ----------- */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #7a3e48;
+}
+
+nav ul li a:hover {
+    color: #b94e63;
+}
+
+/* ----------- SECCIÓN INICIO ----------- */
+#inicio {
+    background-image: url('Img/Nosotros.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 5rem 1rem;
+}
+
+#inicio h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+}
+
+#inicio p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Botones principales */
+#inicio button,
+form button {
+    background: linear-gradient(135deg, #f7d9e3, #fce4ec);
+    color: #7a3e48;
+    border: 1px solid #f5b6c2;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+#inicio button:hover,
+form button:hover {
+    background: linear-gradient(135deg, #b94e63, #e57393);
+    color: white;
+    transform: scale(1.05);
+}
+
+/* ----------- SOBRE MÍ ----------- */
+#sobre-mi {
+    max-width: 800px;
+    margin: auto;
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+/* ----------- PRODUCTOS ----------- */
+#productos h2 {
+    text-align: center;
+    color: #7a3e48;
+    margin-bottom: 2rem;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.galeria figure {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeria figure:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.galeria img {
+    width: 100%;
+    display: block;
+}
+
+.galeria figcaption {
+    padding: 0.8rem;
+    font-weight: bold;
+    color: #7a3e48;
+}
+
+/* ----------- SERVICIOS ----------- */
+#servicios {
+    max-width: 800px;
+    margin: auto;
+    padding: 3rem 1rem;
+}
+
+#servicios h2 {
+    text-align: center;
+    color: #7a3e48;
+    margin-bottom: 1rem;
+}
+
+#servicios ul {
+    list-style: none;
+    text-align: center;
+}
+
+#servicios li {
+    padding: 0.5rem;
+    background-color: #f7d9e3;
+    margin: 0.5rem 0;
+    border-radius: 5px;
+}
+
+/* ----------- TESTIMONIOS ----------- */
+#testimonios {
+    background-color: #fff0f6;
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+#testimonios h2 {
+    color: #7a3e48;
+    margin-bottom: 2rem;
+}
+
+blockquote {
+    font-style: italic;
+    background-color: #fffafc;
+    border: 2px solid #f7d9e3;
+    padding: 1rem;
+    border-radius: 5px;
+    max-width: 600px;
+    margin: 1rem auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* ----------- CONTACTO ----------- */
+#contacto {
+    padding: 3rem 1rem;
+    max-width: 600px;
+    margin: auto;
+}
+
+#contacto h2 {
+    text-align: center;
+    color: #7a3e48;
+    margin-bottom: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 0.5rem;
+    margin-bottom: 0.2rem;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* ----------- FOOTER ----------- */
+footer {
+    background-color: #f7d9e3;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    color: #7a3e48;
+}
+
+/* ----------- SEPARADORES DECORATIVOS ----------- */
+section::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 30px;
+    background: url('img/floral-separator.svg') repeat-x;
+    background-size: contain;
+    margin: 2rem 0;
+}
+
+/* ----------- ANIMACIONES ----------- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+section h2, section p, figure {
+    animation: fadeIn 1s ease forwards;
+}
+
+/* ----------- TIPOGRAFÍA ----------- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Great+Vibes&display=swap');
+
+header h1,
+section h2 {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 1px;
+}
+
+/* ----------- RESPONSIVE ----------- */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+}
